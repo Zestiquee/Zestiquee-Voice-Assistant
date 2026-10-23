@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #FAF7F2;
+    --bg-card: #FFFFFF;
+    --bg-surface: #F4EFEB;
+    --text-primary: #1F2421;
+    --text-secondary: #5A625B;
+    --accent-herb: #2D5A43;
+    --accent-herb-light: #EBF3EE;
+    --accent-terracotta: #C85A32;
+    --accent-gold: #D9822B;
+    --border-warm: #E6DFD5;
+  }
+
+  body {
+    background-color: var(--bg-warm);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom pulsing glow for voice orb */
+@keyframes voice-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(45, 90, 67, 0.25), 0 0 30px rgba(45, 90, 67, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(45, 90, 67, 0.45), 0 0 50px rgba(45, 90, 67, 0.25);
+    transform: scale(1.04);
+  }
+}
+
+.animate-voice-glow {
+  animation: voice-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes voice-active-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(200, 90, 50, 0.4), 0 0 45px rgba(200, 90, 50, 0.25);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(200, 90, 50, 0.65), 0 0 70px rgba(200, 90, 50, 0.35);
+    transform: scale(1.08);
+  }
+}
+
+.animate-voice-active {
+  animation: voice-active-pulse 1.4s ease-in-out infinite;
+}
+

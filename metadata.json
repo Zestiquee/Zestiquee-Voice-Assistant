@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Zestiquee",
+  "description": "Your kitchen. Your voice. Everything organized. A multilingual, voice-first AI kitchen assistant inspired by Alexa with smart pantry management, two recipe options, and cooking tools.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
